@@ -11,16 +11,23 @@
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
+    .state('home', {
+        url: '/'
+        // templateUrl: 'welcome/welcome.html'
+    })
       .state('item-categories', {
         url: '/categories',
         templateUrl: 'items/item-categories.html',
         controller: 'ItemCategoriesController',
         controllerAs: 'icat'
     })
-    .state('home', {
-        url: '/'
-        // templateUrl: 'welcome/welcome.html'
-    });
+    .state('item-categories.items-list', {
+    url: '/:name',
+    templateUrl: 'items/items-list.html',
+    controller: 'ItemsListController',
+    controllerAs: 'items'
+});
+
 
 
     // .state('animals.animalDetail', {

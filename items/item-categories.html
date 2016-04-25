@@ -1,10 +1,9 @@
-<h2>Item Types</h2>
+<h2>Items</h2>
 <ul>
     <li ng-repeat='categories in icat.list'>
-        {{categories.category}}
-        <!-- [<a ui-sref='animals.animalDetail({ id: $index })'>detail</a>] -->
+        <a ui-sref='item-categories.items-list({ name: categories.category})'>{{categories.category}}</a>
         <!-- put   -->
     </li>
 </ul>
 
-<aside class='animal-detail' ui-view></aside>
+<aside class='items-list' ui-view></aside>
