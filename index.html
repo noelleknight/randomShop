@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='randomShop'>
+<head>
+  <meta charset='utf-8'>
+  <title>The randomShop</title>
+
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+  <meta name='description' content='randomShop App'>
+  <meta name='author' content='Noelle Knight'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <main>
+    <header>
+    <!-- ng-controller='WelcomeController as welcome' class= 'container'> -->
+
+      <h2>The randomShop</h2>
+      <h3 class="text-primary">Hello, Beautiful </h3>
+      <!-- PUT ITEM here!!!! <img ng-src='{{welcome.getWeeklyItem()}}' alt='Logo'> -->
+
+      <nav>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a ui-sref='home'>Home</a></li>
+          <li role="presentation"><a ui-sref='item-categories'>Items</a></li>
+          <li role="presentation"><a ui-sref='cart'>Cart</a></li>
+        </ul> 
+
+      </nav>
+    </header>
+
+    <section class='page-content' ui-view></section>
+<footer class="container">
+<div class="panel panel-info">&copy 2016</div>
+</footer>
+
+
+  </main>
+
+
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
+  <script src='http://angular-ui.github.io/ui-router/release/angular-ui-router.js'></script>
+
+  <script src='shared/randomShop.module.js'></script>
+  <script src='items/itemCategory.controller.js'></script>
+
+  <!-- <script src='shared/weather.service.js'></script>
+
+  <script src='welcome/welcome.controller.js'></script>
+  <script src='animal/animal.controller.js'></script>
+  <script src='animal/animalDetail.controller.js'></script>
+  <script src='animal/animal.service.js'></script>
+  <script src='admin/admin.controller.js'></script> -->
+</body>
+</html>
