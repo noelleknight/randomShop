@@ -12,21 +12,28 @@
 
     $stateProvider
     .state('home', {
-        url: '/'
-        // templateUrl: 'welcome/welcome.html'
+      url: '/'
+      // templateUrl: 'welcome/welcome.html'
     })
-      .state('item-categories', {
-        url: '/categories',
-        templateUrl: 'items/item-categories.html',
-        controller: 'ItemCategoriesController',
-        controllerAs: 'icat'
+    .state('item-categories', {
+      url: '/categories',
+      templateUrl: 'items/item-categories.html',
+      controller: 'ItemCategoriesController',
+      controllerAs: 'icat'
     })
-    .state('item-categories.items-list', {
-    url: '/:name',
-    templateUrl: 'items/items-list.html',
-    controller: 'ItemsListController',
-    controllerAs: 'items'
-});
+
+      .state('item-categories.items-list', {
+      url: '/:name',
+      templateUrl: 'items/items-list.html',
+      controller: 'ItemsListController',
+      controllerAs: 'itemsListc'
+    })
+    .state('item-categories.items-list.item-details', {
+    url: '/:detail',
+    templateUrl: 'items/items-detail.html',
+    controller: 'ItemsDetailController',
+    controllerAs: 'itemsDeetc'
+  });
 
 
 
