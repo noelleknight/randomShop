@@ -21,28 +21,16 @@
       controller: 'ItemCategoriesController',
       controllerAs: 'icat'
     })
-
-      .state('item-categories.items-list', {
+    .state('item-categories.items-list', {
       url: '/:name',
       templateUrl: 'items/items-list.html',
       controller: 'ItemsListController',
-      controllerAs: 'itemsListc'
+      controllerAs: 'items'
     })
-    .state('item-categories.items-list.item-details', {
-    url: '/:detail',
-    templateUrl: 'items/items-detail.html',
-    controller: 'ItemsDetailController',
-    controllerAs: 'itemsDeetc'
-  });
-
-
-
-    // .state('animals.animalDetail', {
-    //     url: '/:id',
-    //     templateUrl: 'animal/animal-detail.html',
-    //     controller: 'AnimalDetailController',
-    //     controllerAs: 'animal'
-    // });
+    .state('details', {
+      url: '/details',
+      templateUrl: 'details/details.html',
+    });
 
   }
 

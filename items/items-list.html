@@ -1,9 +1,9 @@
 <h2>Items</h2>
-  <ul>
-    <li ng-repeat='items in itemsListc.list({name: items.item})'>
-      <a ui-sref='item-categories.items-list.item-details({ name: categories.category})'>{{categories.category}}</a>
-{{items.item}}
-</li>
+<ul>
+    <li ng-repeat='categories in icat.list'>
+        <a ui-sref='details'>{{categories.category}}</a>
+        <!-- put   -->
+    </li>
 </ul>
 
-<aside class='items-detail' ui-view></aside>
+<aside class='items-list' ui-view></aside>
