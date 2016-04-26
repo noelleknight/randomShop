@@ -30,6 +30,12 @@
     .state('details', {
       url: '/details',
       templateUrl: 'details/details.html',
+    })
+    .state('cart', {
+      url: '/cart',
+      templateUrl: 'cart/cart.html',
+      controller: 'CartController',
+      controllerAs: 'cart'
     });
 
   }
